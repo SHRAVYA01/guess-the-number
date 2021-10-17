@@ -1,0 +1,22 @@
+import random
+import math
+l=int(input("enter lower bound:-"))
+u=int(input("enter upper bound:-"))
+x=random.randint(l,u)
+g=(math.log(u-l+1))
+r=round(g)
+print("you have",r,"chances to guess")
+count=0
+while(count<g):
+    count+=1
+    guess=int(input("guess a number:"))
+    if(x==guess):
+        print("congratulations you did it in",count,"tries")
+        break
+    elif(x>guess):
+        print("your guess is low")
+    elif(x<guess):
+        print("your guess is high")
+if(count>=g):
+    print("the number is %d" %x)
+    print("BETTER LUCK NEXT TIME")
