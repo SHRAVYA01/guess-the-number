@@ -7,7 +7,7 @@ g=(math.log(u-l+1))
 r=round(g)
 print("you have",r,"chances to guess")
 count=0
-while(count<g):
+while(count<r):
     count+=1
     guess=int(input("guess a number:"))
     if(x==guess):
@@ -17,6 +17,6 @@ while(count<g):
         print("your guess is low")
     elif(x<guess):
         print("your guess is high")
-if(count>=g):
+if(count>=r):
     print("the number is %d" %x)
     print("BETTER LUCK NEXT TIME")
